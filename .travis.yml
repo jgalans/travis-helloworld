@@ -1,7 +1,15 @@
 language: python
+
 python:
   - "2.7"
+  
 services:
   - docker
+  
+install:
+  - docker build -t container-helloworld .
+  - docker run -d -p 127.0.0.1:80:80 --name helloworld container-helloworld
+  
 script: 
   - python hello.py
+  - docker ps | grep -q 
