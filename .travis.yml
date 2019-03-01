@@ -12,4 +12,4 @@ install:
   
 script: 
   - python hello.py
-  - docker ps | grep -q 
+  - docker ps | grep -q container-helloworld
