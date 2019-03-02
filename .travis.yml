@@ -10,3 +10,6 @@ install:
   - docker build -t container-helloworld .
   - docker run container-helloworld
   - docker ps -a
+
+script:
+  - python hello.py
