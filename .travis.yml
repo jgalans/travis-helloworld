@@ -8,11 +8,8 @@ services:
   
 install:
   - docker build -t container-helloworld .
-  - docker run -d -p 127.0.0.1:80:80 --name helloworld container-helloworld
+  - docker run container-helloworld
   - docker ps -a
   
 script: 
   - python hello.py
-  
-after_script:
-- docker rm -f helloworld
